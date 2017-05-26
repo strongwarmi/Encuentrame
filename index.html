@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 80vh;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Encuentrame!</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var laboratoriaLima = {lat: -12.1191427, lng: -77.0349046};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: laboratoriaLima
+        });
+        var markadorLaboratoria = new google.maps.Marker({
+          position: laboratoriaLima,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCggHFUL-v6lMEWpykkEEmqaDwqzcS3ASs&callback=initMap">
+    </script>
+  </body>
+</html>
