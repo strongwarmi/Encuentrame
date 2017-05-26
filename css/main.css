@@ -1,0 +1,31 @@
+@@import "https://fonts.googleapis.com/css?family=Montserrat";
+body{
+  font-family: 'Montserrat',sans-serif;
+}
+#map {
+  height: 70vh;
+  width: 100%;
+ }
+ .bg-orange{
+   background-color: #f7b617;
+   padding: 15px 5px;
+ }
+i{
+  color: white;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.form-control{
+  background-color: transparent;
+  color: white;
+  border: 1px solid #fff;
+}
+.form-control[placeholder] {
+  color: #fff;
+}
+.form-control::-webkit-input-placeholder {
+  color: #fff;
+}
+.form-control:-moz-placeholder {
+  color: #fff;
+}

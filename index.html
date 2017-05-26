@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      #map {
-        height: 80vh;
-        width: 100%;
-       }
-    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
   </head>
-  <body>
-    <h3>Encuentrame!</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var laboratoriaLima = {lat: -12.1191427, lng: -77.0349046};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 18,
-          center: laboratoriaLima
-        });
-        var markadorLaboratoria = new google.maps.Marker({
-          position: laboratoriaLima,
-          map: map
-        });
-      }
-    </script>
+  <body class="container">
+    <div class="row">
+      <h3>Encuentrame!</h3>
+    </div>
+    <div class="row">
+      <div class="bg-orange container-fluid">
+        <div class="none" id="tarifa"></div>
+        <form  action="index.html" method="post">
+          <div class="col-lg-4">
+            <div class="col-lg-2">
+              <i class="glyphicon glyphicon-record"></i>
+            </div>
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="punto-partida" placeholder="Ingresa tu punto de partida">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-lg-2">
+              <i class="glyphicon glyphicon-send"></i>
+            </div>
+            <div class="col-lg-10">
+              <input type="text" class="form-control" id="punto-destino" placeholder="Ingresa tu destino">
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <button class="btn btn-default" type="button" id="trazar-ruta" >Trazar ruta</button>
+          </div>
+          <div class="col-lg-2">
+            <button class="btn btn-default" type="button" href="">Encuéntrame</button>
+          </div>
+        </form>
+      </div>
+      <div id="map"></div>
+    </div>
+    <!-- jQuery (necesario para que funcionen los componentes de Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Incluir todos tus scripts apartir de este punto -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCggHFUL-v6lMEWpykkEEmqaDwqzcS3ASs&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCggHFUL-v6lMEWpykkEEmqaDwqzcS3ASs&callback=initMap&libraries=places">
     </script>
   </body>
 </html>
